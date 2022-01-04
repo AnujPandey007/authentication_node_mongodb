@@ -54,7 +54,7 @@ async function createUser() {
         headers: {"Content-type": "application/json; charset=UTF-8"}
     })
     .then(response => response.json()) 
-    .then(json => console.log(json))
+    .then(json => /*console.log(json)*/ response.redirect("/about"))
     .catch(err => console.log(err));
 }
 
