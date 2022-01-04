@@ -34,11 +34,11 @@ app.set('views', './views');
 app.set('view engine', 'ejs');
 
 app.get('', (req, res) => {
-    res.render('index');
+    res.render('loginPage');
 });
 
-app.get('/about', (req, res) => {
-    res.render('about', { text: 'About Page'});
+app.get('/homePage', (req, res) => {
+    res.render('homePage', { text: 'About Page'});
 });
 
 
