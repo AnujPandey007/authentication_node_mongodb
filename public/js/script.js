@@ -44,18 +44,18 @@ async function createUser() {
         userAge: userAge,
         userEmail: userEmail,
         userPassword: userPassword,
-        isMale: isMale
+        isMale: isMale=="on" ? true : false
     }
       
-    console.log(userData);
-    // fetch('https://authenticationmongoose.herokuapp.com/insertUser/', {
-    //     method: "POST",
-    //     body: JSON.stringify(_data),
-    //     headers: {"Content-type": "application/json; charset=UTF-8"}
-    // })
-    // .then(response => response.json()) 
-    // .then(json => console.log(json))
-    // .catch(err => console.log(err));
+    // console.log(userData);
+    fetch('https://authenticationmongoose.herokuapp.com/insertUser/', {
+        method: "POST",
+        body: JSON.stringify(_data),
+        headers: {"Content-type": "application/json; charset=UTF-8"}
+    })
+    .then(response => response.json()) 
+    .then(json => console.log(json))
+    .catch(err => console.log(err));
 }
 
 
