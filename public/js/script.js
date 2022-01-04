@@ -33,22 +33,24 @@
 
 
 async function createUser() {
-    let _data = {
-        userName: "qwe",
-        userAge: 20,
-        userEmail: "req.body.userEmail",
-        userPassword: "req.body.userPassword",
-        isMale: true
-    }
+    let userName = document.getElementById('Uname').value;
+    console.log(userName);
+    // let _data = {
+    //     userName: "qwe",
+    //     userAge: 20,
+    //     userEmail: "req.body.userEmail",
+    //     userPassword: "req.body.userPassword",
+    //     isMale: true
+    // }
       
-    fetch('https://authenticationmongoose.herokuapp.com/insertUser/', {
-        method: "POST",
-        body: JSON.stringify(_data),
-        headers: {"Content-type": "application/json; charset=UTF-8"}
-    })
-    .then(response => response.json()) 
-    .then(json => console.log(json))
-    .catch(err => console.log(err));
+    // fetch('https://authenticationmongoose.herokuapp.com/insertUser/', {
+    //     method: "POST",
+    //     body: JSON.stringify(_data),
+    //     headers: {"Content-type": "application/json; charset=UTF-8"}
+    // })
+    // .then(response => response.json()) 
+    // .then(json => console.log(json))
+    // .catch(err => console.log(err));
 }
 
 
