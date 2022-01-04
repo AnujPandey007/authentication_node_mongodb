@@ -2,7 +2,7 @@
 getUserData();
 
 async function getUserData() {
-    fetch("http://authenticationmongoose.herokuapp.com/getUsers/").then(function (response) {
+    fetch("https://authenticationmongoose.herokuapp.com/getUsers/").then(function (response) {
         return response.json();
     }).then(function (data) {
         appendData(data);
