@@ -8,16 +8,47 @@
 
 // getApi();
 
+// import express from 'express';
 
-async function getApi() {
-    fetch("https://authenticationmongoose.herokuapp.com/getUsers/").then(function (response) {
-        return response.json();
-    }).then(function (data) {
-        // appendData(data);
-        console.log(data);
-    }).catch(function (err) {
-        console.log(err);
-    });
+// const app = express();
+
+// app.post('/login', async(req, res)=>{
+//     let _data = {
+//         userName: "qwe",
+//         userAge: 20,
+//         userEmail: "req.body.userEmail",
+//         userPassword: "req.body.userPassword",
+//         isMale: true
+//     }
+      
+//     fetch('https://jsonplaceholder.typicode.com/posts', {
+//         method: "POST",
+//         body: JSON.stringify(_data),
+//         headers: {"Content-type": "application/json; charset=UTF-8"}
+//     })
+//     .then(response => response.json()) 
+//     .then(json => console.log(json))
+//     .catch(err => console.log(err));
+// });
+
+
+async function createUser() {
+    let _data = {
+        userName: "qwe",
+        userAge: 20,
+        userEmail: "req.body.userEmail",
+        userPassword: "req.body.userPassword",
+        isMale: true
+    }
+      
+    fetch('https://authenticationmongoose.herokuapp.com/insertUser/', {
+        method: "POST",
+        body: JSON.stringify(_data),
+        headers: {"Content-type": "application/json; charset=UTF-8"}
+    })
+    .then(response => response.json()) 
+    .then(json => console.log(json))
+    .catch(err => console.log(err));
 }
 
 

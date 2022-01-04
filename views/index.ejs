@@ -11,7 +11,7 @@
 
     <h2>Login Page</h2><br>    
     <div class="login">    
-    <form id="login" method="get" action="login.php">    
+    <form id="login" method="POST" action="/login">    
         <label><b>User Name     
         </b>    
         </label>    
@@ -22,7 +22,7 @@
         </label>    
         <input type="Password" name="Pass" id="Pass" placeholder="Password">    
         <br><br>    
-        <button type="button" name="log" id="log" value="LogIn" onclick="getApi()">
+        <button type="button" name="log" id="log" value="LogIn" onclick="createUser()">
             <div>Log In Here</div>
         </button>    
         <br><br>     
