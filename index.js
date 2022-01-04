@@ -38,7 +38,7 @@ app.get('', (req, res) => {
 });
 
 app.get('/homePage', (req, res) => {
-    res.render('homePage', { text: 'About Page'});
+    res.render('homePage', { text: 'Home Page'});
 });
 
 
