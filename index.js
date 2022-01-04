@@ -41,8 +41,8 @@ app.get('/homePage', (req, res) => {
     res.render('homePage', { text: 'Home Page'});
 });
 
-
-//API
+ 
+//APIs
 app.get('/getUsers', async(req, res)=>{
   try{
     const user = await User.find();
