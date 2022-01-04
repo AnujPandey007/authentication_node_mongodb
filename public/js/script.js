@@ -50,7 +50,7 @@ async function createUser() {
     // console.log(userData);
     fetch('https://authenticationmongoose.herokuapp.com/insertUser/', {
         method: "POST",
-        body: JSON.stringify(_data),
+        body: JSON.stringify(userData),
         headers: {"Content-type": "application/json; charset=UTF-8"}
     })
     .then(response => response.json()) 
