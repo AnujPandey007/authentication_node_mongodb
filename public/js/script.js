@@ -34,15 +34,20 @@
 
 async function createUser() {
     let userName = document.getElementById('Uname').value;
-    console.log(userName);
-    // let _data = {
-    //     userName: "qwe",
-    //     userAge: 20,
-    //     userEmail: "req.body.userEmail",
-    //     userPassword: "req.body.userPassword",
-    //     isMale: true
-    // }
+    let userAge = document.getElementById('age').value;
+    let userEmail = document.getElementById('email').value;
+    let userPassword = document.getElementById('Pass').value;
+    let isMale = document.getElementById('check').value;
+
+    let _data = {
+        userName: userName,
+        userAge: userAge,
+        userEmail: userEmail,
+        userPassword: userPassword,
+        isMale: isMale
+    }
       
+    console.log(userName);
     // fetch('https://authenticationmongoose.herokuapp.com/insertUser/', {
     //     method: "POST",
     //     body: JSON.stringify(_data),
