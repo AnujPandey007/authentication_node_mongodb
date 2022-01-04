@@ -22,7 +22,6 @@ function appendData(data) {
                         <span style="--i:3;"></span>
                         <div class="cardBox">
                             <div class="quote"><h2>${data[i].userName}</h2> <br> <br> <div>${data[i].userEmail}</div> </div>
-                            <div class="glass"><h2>Quoted By <i><br> Lord Krishna</i> </h2></div>
                         </div>
                     </div>`
       mainContainer.appendChild(div);
